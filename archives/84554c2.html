@@ -5,26 +5,28 @@
   <meta name="Accept-Encoding" content="gzip" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="google-site-verification" content="kGPiUNGnqFx4hMp75ZTWu5fdyHizroDkn8aU4dzwcxU" />
-  <meta name="baidu-site-verification" content="eqSGc7zGxj" />
   <meta name="360-site-verification" content="3e9b2d1cf64f8a19935924f63ce9eeca" />
+  <meta name="shenma-site-verification" content="3fab5475b8327c3cc8fd01a66d331df8_1587959548"/>
+  <meta http-equiv="Content-Language" content="zh-cn">
   
 
   
-  <title>vue-umeditor | Chaosxy</title>
+  <title>vue umeditor(一) | Chaosxy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="rich text editor for vue js">
+  <meta name="description" content="Vue如何使用富文本编辑器.支持数学公式的富文本编辑器,在Vue中一键安装使用的编辑器,chaosXy的原创文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue-umeditor">
+<meta property="og:title" content="vue umeditor(一)">
 <meta property="og:url" content="https://chaosxy.com/archives/84554c2.html">
 <meta property="og:site_name" content="Chaosxy">
-<meta property="og:description" content="rich text editor for vue js">
+<meta property="og:description" content="Vue如何使用富文本编辑器.支持数学公式的富文本编辑器,在Vue中一键安装使用的编辑器,chaosXy的原创文章">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-04T15:10:44.000Z">
-<meta property="article:modified_time" content="2020-04-11T03:09:55.507Z">
+<meta property="article:modified_time" content="2020-07-01T04:00:07.789Z">
 <meta property="article:author" content="ChaosXy">
 <meta property="article:tag" content="vue">
-<meta property="article:tag" content="rich editor">
+<meta property="article:tag" content="富文本编辑器">
 <meta property="article:tag" content="umeditor">
+<meta property="article:tag" content="editor">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Chaosxy" type="application/atom+xml">
@@ -39,16 +41,16 @@
 <link rel="stylesheet" href="/css/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script>
+  <script type="text/javascript">
     (function(){
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https'){
-       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else{
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else{
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
@@ -62,13 +64,13 @@
   <div id="banner"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
+      <h2 id="logo-wrap">
         <a href="/" id="logo">Chaosxy</a>
-      </h1>
+      </h2>
       
-        <h2 id="subtitle-wrap">
+        <h1 id="subtitle-wrap">
           <a href="/" id="subtitle">Javascript,css和php设计和开发的相关文章</a>
-        </h2>
+        </h1>
       
     </div>
     <div id="header-inner" class="inner">
@@ -108,29 +110,35 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      vue-umeditor
-    </h1>
+    <h2 class="article-title" itemprop="name">
+      vue umeditor(一)
+    </h2>
   
 
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="editor">
+        <p>现在，你可以在富文本中插入一些数学公式，数学符号，甚至能够插入地图。让你的文章更加生动形象。</p>
+<p>更多详情，请查看<a href="http://ueditor.baidu.com/website/umeditor.html" target="_blank" rel="noopener">umeditor</a>官网。</p>
+<p>关于@blog1997/vue-umeditor，会分成两部分向大家介绍，本文属于第一部分，主要介绍编辑器在前端是如何呈现的。</p>
+<p>关于其他的一些细节，如后端处理编辑器提交的文件等，会在<a href="/archives/1af19737.html">下一部分</a>介绍。</p>
+<div id="editor">
     <form action="/">
-        <umeditor/>
-        <input type="submit">
+        <umeditor init-message="我有一件礼物想呈现给你，那就是在孤独难耐的夜晚，依然会闪闪发光的漫天繁星..."/>
     </form>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js"></script>
 <script src="/js/umeditor.bundle.js"></script>
 <script src="/js/umeditor.1.bundle.js"></script>
 <script>
-    new Vue({
-        el: '#editor'
+    document.addEventListener('DOMContentLoaded', function () {
+        let a = new Vue({
+            el: '#editor'
+        })
     })
 </script>
+
 <a id="more"></a>
 <h2 id="dependence">相关依赖</h2>
     <ul>
@@ -138,6 +146,7 @@
         <li>mathquill</li>
         <li>baidu map</li>
     </ul>
+
 <h2 id="new-feature">新特性</h2>
     <ul>
         <li>使用blob，对图片进行本地预览</li>
@@ -145,15 +154,17 @@
         <li>使用Icofont替换spirit图片</li>
         <li>修复无法插入地图的bug</li>
     </ul>
+
 <h2 id="compatibility">兼容性</h2>
 <p>IE >= 10</p>
+
 <h2 id="install">安装</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @blog1997/vue-umeditor --save</span><br></pre></td></tr></table></figure>
 <h2 id="register-component">注册组件</h2>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> editor <span class="keyword">from</span> <span class="string">'@blog1997/vue-umeditor'</span></span><br><span class="line"></span><br><span class="line">Vue.use(editor)</span><br></pre></td></tr></table></figure>
 
 <h2 id="add-template">添加模板</h2>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--toolbar为组件的props属性，指定富文本编辑器的菜单。默认全部显示--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> <span class="attr">:toolbar</span>=<span class="string">"['emotion']"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--toolbar为组件的props属性，指定富文本编辑器的菜单。默认全部显示--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--init-message为组件的props属性，指定富文本编辑器初始化内容--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> <span class="attr">:toolbar</span>=<span class="string">"['emotion']"</span> <span class="attr">:init-message</span>=<span class="string">"'as you wish'"</span> @<span class="attr">receiveUM</span>=<span class="string">"setUM"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="mount">挂载组件</h2>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#editor'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -164,13 +175,16 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> <span class="attr">:upload-url</span>=<span class="string">"'http://you_site.com/api/upload-img'"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="upload-img-2">上传图片·(二)</h3>
 <p>如果不想使用alter，让用户有一个更好的体验。也可异步上传图片。下面的例子中使用axios对图片进行异步上传。这样，你就可以随心所欲地控制图片上传的各个阶段。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> @<span class="attr">click</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span>  @<span class="attr">receiveUM</span>=<span class="string">"setUM"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> @<span class="attr">click</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>js代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios form <span class="string">'axios'</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#editor'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            editor: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * editor = UM.getEditor('editor', &#123;</span></span><br><span class="line"><span class="comment">         *   focus: true</span></span><br><span class="line"><span class="comment">         * &#125;)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        setUM (editor) &#123;</span><br><span class="line">            <span class="keyword">this</span>.editor = editor</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 提交表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        submit () &#123;</span><br><span class="line">            <span class="comment">// 获取添加的图片</span></span><br><span class="line">            <span class="keyword">const</span> files = <span class="built_in">window</span>.UM.getFileFormDate()</span><br><span class="line">            <span class="comment">// 如果文章中没有图片上传</span></span><br><span class="line">            <span class="keyword">if</span> (!files) &#123;</span><br><span class="line">                <span class="keyword">this</span>.uploadForm()</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 开始上传图片</span></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your_url'</span>,</span><br><span class="line">                data: files</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传成功,替换blob路径</span></span><br><span class="line">                <span class="built_in">window</span>.UM.replaceImageUrl(response.data.data)</span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 上传最终的表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        uploadForm () &#123;</span><br><span class="line">            <span class="keyword">const</span> content = <span class="keyword">this</span>.UM.getContent()</span><br><span class="line"></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your/url'</span>,</span><br><span class="line">                data: content</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章成功</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios form <span class="string">'axios'</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#editor'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            editor: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * editor = UM.getEditor('editor', &#123;</span></span><br><span class="line"><span class="comment">         *   focus: true</span></span><br><span class="line"><span class="comment">         * &#125;)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        receiveUM (editor) &#123;</span><br><span class="line">            <span class="keyword">this</span>.editor = editor</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 提交表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        submit () &#123;</span><br><span class="line">            <span class="keyword">const</span> files = <span class="built_in">window</span>.UM.getFileFormDate()</span><br><span class="line">            <span class="comment">// 如果文章中没有图片上传</span></span><br><span class="line">            <span class="keyword">if</span> (!files) &#123;</span><br><span class="line">                <span class="keyword">this</span>.uploadForm()</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 开始上传图片</span></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your_url'</span>,</span><br><span class="line">                data: files</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传成功</span></span><br><span class="line">                <span class="built_in">window</span>.UM.replaceImageUrl(response.data.data)</span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 上传最终的表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        uploadForm () &#123;</span><br><span class="line">            <span class="keyword">const</span> content = <span class="keyword">this</span>.UM.getContent()</span><br><span class="line"></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your/url'</span>,</span><br><span class="line">                data: content</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章成功</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="attention">注意</h2>
 <p>不能设置img标签的id属性</p>
 <p>文件打包的时候，需要对代码进行分割。使用webpack的code split功能。否则，打包文件过大。</p>
-<h3 id="issues"><a href="https://gitee.com/ju_15163364725/ju_15163364725/issues" target="_blank" rel="noopener">Issues</a></h3>
+<h3 id="issues"><a href="https://github.com/youLookLikeDelicious/vue-umeditor/issues" target="_blank" rel="noopener">Issues</a></h3>
+
+<p>有什么意见或是建议，欢迎留言讨论</p>
 
 <script type="text/javascript">
     (function(d, s) {
@@ -193,12 +207,26 @@
       <a data-url="https://chaosxy.com/archives/84554c2.html" data-id="ck8wm8u3l0000uswtgg65b5vv" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/umeditor/" rel="tag">umeditor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ueditor%E7%B2%BE%E7%AE%80%E7%89%88/" rel="tag">ueditor精简版</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
 
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/archives/1af19737.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vue-umeditor(二)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
   <div id="lv-container" data-id="city" data-uid="MTAyMC80OTQ3NC8yNTk2Ng==">
 </article>
@@ -214,7 +242,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/umeditor/" rel="tag">umeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ueditor%E7%B2%BE%E7%AE%80%E7%89%88/" rel="tag">ueditor精简版</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
     </div>
   </div>
 
@@ -224,7 +252,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/umeditor/" style="font-size: 10px;">umeditor</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
+      <a href="/tags/ueditor%E7%B2%BE%E7%AE%80%E7%89%88/" style="font-size: 10px;">ueditor精简版</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
     </div>
   </div>
 
@@ -246,7 +274,11 @@
       <ul>
         
           <li>
-            <a href="/archives/84554c2.html">vue-umeditor</a>
+            <a href="/archives/1af19737.html">vue-umeditor(二)</a>
+          </li>
+        
+          <li>
+            <a href="/archives/84554c2.html">vue umeditor(一)</a>
           </li>
         
       </ul>
