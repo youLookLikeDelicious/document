@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="Accept-Encoding" content="gzip" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="google-site-verification" content="kGPiUNGnqFx4hMp75ZTWu5fdyHizroDkn8aU4dzwcxU" />
+  <meta name="baidu-site-verification" content="eqSGc7zGxj" />
+  <meta name="360-site-verification" content="3e9b2d1cf64f8a19935924f63ce9eeca" />
+  
+
+  
+  <title>vue-umeditor | Chaosxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="rich text editor for vue js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-umeditor">
+<meta property="og:url" content="https://chaosxy.com/archives/84554c2.html">
+<meta property="og:site_name" content="Chaosxy">
+<meta property="og:description" content="rich text editor for vue js">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-04T15:10:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T03:09:55.507Z">
+<meta property="article:author" content="ChaosXy">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="rich editor">
+<meta property="article:tag" content="umeditor">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Chaosxy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Chaosxy</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Javascript,css和php设计和开发的相关文章</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about-me">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chaosxy.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue-umeditor" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/archives/84554c2.html" class="article-date">
+  <time datetime="2020-04-04T15:10:44.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue-umeditor
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="editor">
+    <form action="/">
+        <umeditor/>
+        <input type="submit">
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js"></script>
+<script src="/js/umeditor.bundle.js"></script>
+<script src="/js/umeditor.1.bundle.js"></script>
+<script>
+    new Vue({
+        el: '#editor'
+    })
+</script>
+<a id="more"></a>
+<h2 id="dependence">相关依赖</h2>
+    <ul>
+        <li>jQuery</li>
+        <li>mathquill</li>
+        <li>baidu map</li>
+    </ul>
+<h2 id="new-feature">新特性</h2>
+    <ul>
+        <li>使用blob，对图片进行本地预览</li>
+        <li>修复无法插入公式的bug</li>
+        <li>使用Icofont替换spirit图片</li>
+        <li>修复无法插入地图的bug</li>
+    </ul>
+<h2 id="compatibility">兼容性</h2>
+<p>IE >= 10</p>
+<h2 id="install">安装</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @blog1997/vue-umeditor --save</span><br></pre></td></tr></table></figure>
+<h2 id="register-component">注册组件</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> editor <span class="keyword">from</span> <span class="string">'@blog1997/vue-umeditor'</span></span><br><span class="line"></span><br><span class="line">Vue.use(editor)</span><br></pre></td></tr></table></figure>
+
+<h2 id="add-template">添加模板</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--toolbar为组件的props属性，指定富文本编辑器的菜单。默认全部显示--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> <span class="attr">:toolbar</span>=<span class="string">"['emotion']"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mount">挂载组件</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#editor'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="upload-image">上传图片</h2>
+<p>上传图片有两种方案可供选择</p>
+<h3 id="upload-image-1">上传图片·(一)</h3>
+<p>直接上传表单，需要指定图片上传的地址，但在图片上传失败的时候，会alert一个图片上传失败的信息。该方法也不会提供上传成功后的自定义操作。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> <span class="attr">:upload-url</span>=<span class="string">"'http://you_site.com/api/upload-img'"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="upload-img-2">上传图片·(二)</h3>
+<p>如果不想使用alter，让用户有一个更好的体验。也可异步上传图片。下面的例子中使用axios对图片进行异步上传。这样，你就可以随心所欲地控制图片上传的各个阶段。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"editor"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">umeditor</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> @<span class="attr">click</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios form <span class="string">'axios'</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#editor'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            editor: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * editor = UM.getEditor('editor', &#123;</span></span><br><span class="line"><span class="comment">         *   focus: true</span></span><br><span class="line"><span class="comment">         * &#125;)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        receiveUM (editor) &#123;</span><br><span class="line">            <span class="keyword">this</span>.editor = editor</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 提交表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        submit () &#123;</span><br><span class="line">            <span class="keyword">const</span> files = <span class="built_in">window</span>.UM.getFileFormDate()</span><br><span class="line">            <span class="comment">// 如果文章中没有图片上传</span></span><br><span class="line">            <span class="keyword">if</span> (!files) &#123;</span><br><span class="line">                <span class="keyword">this</span>.uploadForm()</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 开始上传图片</span></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your_url'</span>,</span><br><span class="line">                data: files</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传成功</span></span><br><span class="line">                <span class="built_in">window</span>.UM.replaceImageUrl(response.data.data)</span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 文件上传失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 上传最终的表单</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        uploadForm () &#123;</span><br><span class="line">            <span class="keyword">const</span> content = <span class="keyword">this</span>.UM.getContent()</span><br><span class="line"></span><br><span class="line">            axios(&#123;</span><br><span class="line">                method: <span class="string">'POST'</span>,</span><br><span class="line">                url: <span class="string">'your/url'</span>,</span><br><span class="line">                data: content</span><br><span class="line">            &#125;).then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章成功</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 上传文章失败</span></span><br><span class="line">                <span class="comment">// do something as your wish</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="attention">注意</h2>
+<p>不能设置img标签的id属性</p>
+<p>文件打包的时候，需要对代码进行分割。使用webpack的code split功能。否则，打包文件过大。</p>
+<h3 id="issues"><a href="https://gitee.com/ju_15163364725/ju_15163364725/issues" target="_blank" rel="noopener">Issues</a></h3>
+
+<script type="text/javascript">
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') { return; }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+</script>
+<p><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chaosxy.com/archives/84554c2.html" data-id="ck8wm8u3l0000uswtgg65b5vv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/umeditor/" rel="tag">umeditor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+  <div id="lv-container" data-id="city" data-uid="MTAyMC80OTQ3NC8yNTk2Ng==">
+</article>
+</section>
+        
+          
+  <aside id="sidebar">
+    
+      
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/umeditor/" rel="tag">umeditor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/umeditor/" style="font-size: 10px;">umeditor</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/archives/84554c2.html">vue-umeditor</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+    
+      <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#dependence"><span class="toc-number">1.</span> <span class="toc-text">相关依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-feature"><span class="toc-number">2.</span> <span class="toc-text">新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#compatibility"><span class="toc-number">3.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#install"><span class="toc-number">4.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#register-component"><span class="toc-number">5.</span> <span class="toc-text">注册组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#add-template"><span class="toc-number">6.</span> <span class="toc-text">添加模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mount"><span class="toc-number">7.</span> <span class="toc-text">挂载组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#upload-image"><span class="toc-number">8.</span> <span class="toc-text">上传图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#upload-image-1"><span class="toc-number">8.1.</span> <span class="toc-text">上传图片·(一)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#upload-img-2"><span class="toc-number">8.2.</span> <span class="toc-text">上传图片·(二)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#attention"><span class="toc-number">9.</span> <span class="toc-text">注意</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#issues"><span class="toc-number">9.1.</span> <span class="toc-text">Issues</span></a></li></ol></li></ol>
+        </div>
+      </div>
+    
+  </aside>
+
+        
+      </div>
+      <style>
+  #cnzz_stat_icon_1278750030{
+    float: right;
+  }
+</style>
+<footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 ChaosXy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br/>
+      友情连接: <a href="https://www.blog1997.com" target="_blank">blog1997</a>
+      <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278750030'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1278750030%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+  </div>
+</div>
+</footer>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about-me" class="mobile-nav-link">关于我</a>
+  
+</nav> -->
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
